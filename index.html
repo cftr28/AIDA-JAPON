@@ -216,7 +216,7 @@
             }
         }
 
-        .music-player { margin-bottom: 30px; cursor: pointer; }
+       
         .play-button {
             width: 45px; height: 45px;
             border: 1.5px solid #5d4936;
@@ -679,10 +679,15 @@
 }
 .music-player { 
     position: fixed; 
-    top: 20px; 
-    right: 20px; 
+    bottom: 30px; /* Separación del borde inferior */
+    right: 30px;  /* Separación del borde derecho */
     z-index: 9999; 
     cursor: pointer; 
+    /* Agregué un pequeño fondo para que resalte sobre cualquier foto o color */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 /* --- AJUSTE PARA MÓVIL (Aquí sí que ocupen más pantalla) --- */
 @media (max-width: 480px) {
