@@ -744,28 +744,24 @@
     object-fit: cover !important; 
     display: block;
 }
+.hidden-music{
+    display:none !important;
+}
 .music-player{
-    position:fixed !important;
+    position: fixed !important;
+    left: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
 
-    left:20px;
-    top:50%;
+    width: 50px;
+    height: 50px;
 
-    transform:translateY(-50%);
+    z-index: 999999;
 
-    z-index:999999;
+    display: none;
 
-    width:50px;
-    height:50px;
-
-    background:white;
-
-    border-radius:50%;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    align-items: center;
+    justify-content: center;
 }
 /* --- AJUSTE PARA MÓVIL (Aquí sí que ocupen más pantalla) --- */
 @media (max-width: 480px) {
@@ -780,7 +776,9 @@
         margin-bottom: 20px;
     }
 }
-
+.music-player{
+    display:none;
+}
 
 
 }
@@ -1064,16 +1062,30 @@
 
     <script>
         // LÓGICA DEL PRELOADER
-       document
+document
 .getElementById("openInvitation")
 .addEventListener("click",()=>{
 
+    // Ocultar portada
     document
     .getElementById("preloader")
     .classList.add("hide");
 
-});
+    // Mostrar botón música
+    document
+    .getElementById("music-player")
+    .style.display = "flex";
 
+    // Iniciar música
+    const audio = document.getElementById("bg-music");
+
+    audio.play().then(() => {
+        document
+        .getElementById("music-player")
+        .classList.add("music-playing");
+    });
+
+});
         // RECARGA DE IMÁGENES
         window.addEventListener('load', () => {
             const images = document.querySelectorAll('img');
@@ -1231,14 +1243,6 @@
         }
     }
 
-    // Opcional: Para que la música empiece sola tras la primera interacción (obligatorio en muchos navegadores)
-    window.addEventListener('click', () => {
-        const audio = document.getElementById("bg-music");
-        if (audio.paused) {
-            audio.play();
-            document.getElementById("music-player").classList.add("music-playing");
-        }
-    }, { once: true });
     </script>
 </body>
 </html>
