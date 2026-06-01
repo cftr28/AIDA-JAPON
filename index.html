@@ -181,14 +181,20 @@
 .header-section {
     position: relative;
     width: 100%;
-    /* Usa la proporción nativa de la foto (16:9) para que nunca se deforme ni corte */
     aspect-ratio: 16 / 9; 
-    max-height: 85vh; /* Evita que en pantallas gigantes verticales se vuelva inmensa */
+    max-height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     background-color: #f1eeee;
+}
+
+.header-section img {
+    width: 100%;
+    height: 100%;
+    /* Esta es la clave para que la imagen se vea completa */
+    object-fit: contain; 
 }
 
 .header-bg {
@@ -912,24 +918,28 @@
             <p class="tipo-vestimenta">FORMAL</p>
             <div style="width: 40px; height: 1px; background: #8d7a64; margin: 15px auto; opacity: 0.2;"></div>
             
-            <div style="margin-bottom: 20px;">
-                <p style="font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">MUJERES</p>
-                <p style="font-size: 0.6rem; line-height: 1.4; color: #5d4936; margin-bottom: 10px;">
-                    Vestido largo. <br>
-                    Tacones.
-                </p>
-                
-                <p style="font-size: 0.55rem; letter-spacing: 1px; color: #8d7a64; margin-bottom: 8px;">PALETA DE COLORES REFERENCIALES:</p>
-                <!-- Paleta de colores visual basada en la imagen (tonos cálidos, terracota, palo de rosa, marsala) -->
-                <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 10px;">
-                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #cb9983;"></div>
-                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #b06d64;"></div>
-                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #8b4f58;"></div>
-                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #6a323b;"></div>
-                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #dda58b;"></div>
-                </div>
-                <p style="font-size: 0.75rem; color: #a69683; font-style: italic;">* Por favor evitar blanco, beige y verdes (oliva, sávila, limón)</p>
-            </div>
+         <div style="margin-bottom: 20px;">
+    <p style="font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">MUJERES</p>
+    <p style="font-size: 0.6rem; line-height: 1.4; color: #5d4936; margin-bottom: 10px;">
+        Vestido largo. <br>
+        Tacones.
+    </p>
+    
+    <p style="font-size: 0.55rem; letter-spacing: 1px; color: #8d7a64; margin-bottom: 8px;">PALETA DE COLORES REFERENCIALES:</p>
+    
+    <div style="display: flex; justify-content: center; gap: 6px; margin-bottom: 10px; flex-wrap: wrap;">
+        <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #A94528;"></div>
+        <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #D1943F;"></div>
+        <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #4C3C0B;"></div>
+        <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #931364;"></div>
+        <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #B57F5E;"></div>
+        <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #0F172E;"></div>
+        <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #445468;"></div>
+        <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #8C4E4C;"></div>
+    </div>
+    
+    <p style="font-size: 0.75rem; color: #a69683; font-style: italic;">* Por favor evitar blanco, beige y verdes (oliva, sávila, limón)</p>
+</div>
 
             <div style="width: 40px; height: 1px; background: #8d7a64; margin: 15px auto; opacity: 0.2;"></div>
 
@@ -957,33 +967,64 @@
             <img src="camara.png" alt="Fotos" class="icon-small" style="width: 100px; opacity: 0.6; margin-bottom: 20px;"> 
             <h3 style="margin-bottom: 15px; color: #8d7a64; font-size: 1.5rem;">Nuestras Fotos</h3>
             <p style="margin-bottom: 25px; color: #666; line-height: 1.6;">Queremos ver la boda a través de tus ojos. Comparte tus momentos favoritos con nosotros.</p>
-            <a href="" target="_blank" class="btn-interactivo" style="background-color: #8d7a64; color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: background-color 0.3s ease;">SUBIR FOTOS</a>
+            <a href="https://drive.google.com/drive/folders/1SuSNTIchWYwoeydJ5bE9oO9MUOtvqVwr?usp=sharing" target="_blank" class="btn-interactivo" style="background-color: #8d7a64; color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: background-color 0.3s ease;">SUBIR FOTOS</a>
         </div>
 
-        <div class="tarjeta-interactiva" style="width: 310px; background-color: rgb(255, 255, 255); padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: space-between;">
-            <img src="nota.png" alt="Música" class="icon-small" style="width: 70px; opacity: 0.6; margin-bottom: 20px;">
-            <h3 style="margin-bottom: 15px; color: #8d7a64; font-size: 1.5rem;">¿Qué canción no puede faltar?</h3>
-            <p style="margin-bottom: 25px; color: #666; line-height: 1.6;">Ayúdanos a armar la playlist perfecta para celebrar juntos.</p>
-            <input type="text" id="cancion-input" class="input-musica" placeholder="Canción y artista..." style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;">
-            <button onclick="sugerirCancion()" class="btn-interactivo" id="btn-cancion" style="width: 100%; background-color: #8d7a64; color: white; padding: 12px 24px; border: none; border-radius: 30px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease;">SUGERIR CANCIÓN</button>
-        </div>
+      <div class="tarjeta-interactiva" style="width: 310px; background-color: rgb(255, 255, 255); padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: space-between;">
+    
+    <img src="nota.png" alt="Música" class="icon-small" style="width: 70px; opacity: 0.6; margin-bottom: 20px;">
+    
+    <h3 style="margin-bottom: 15px; color: #8d7a64; font-size: 1.5rem;">¿Qué canción no puede faltar?</h3>
+    
+    <p style="margin-bottom: 25px; color: #666; line-height: 1.6;">Ayúdanos a armar la playlist perfecta para celebrar juntos.</p>
+    
+    <!-- Aquí he envuelto el botón en el enlace -->
+    <a href="https://www.youtube.com/playlist?list=PLtri7wCCjsEZFGKOF4e4rBBxp1yZT8xgr&jct=Gr4yPg3hx1HhL5sfMeEo5Q" target="_blank" style="text-decoration: none; width: 100%;">
+        <button class="btn-interactivo" style="width: 100%; background-color: #8d7a64; color: white; padding: 12px 24px; border: none; border-radius: 30px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease;">
+            SUGERIR CANCIÓN
+        </button>
+    </a>
+    
+</div>
     </div>
 
-    <div class="seccion-galeria" style="width: 100%; padding: 60px 0; background-color: #ffffff; text-align: center;">
-        <h2 class="itinerario-titulo" style="margin-bottom: 40px; font-family: 'Alex Brush', cursive; font-size: 2.2rem; color: #8d7a64;">Nuestra Historia</h2>
+  <div class="seccion-galeria" style="width: 100%; padding: 60px 0; background-color: #ffffff; text-align: center;">
+    <h2 class="itinerario-titulo" style="margin-bottom: 40px; font-family: 'Alex Brush', cursive; font-size: 2.2rem; color: #8d7a64;">Nuestra Historia</h2>
+    
+    <div class="galeria-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
         
-        <div class="galeria-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
-            <div class="foto-item reveal" style="width: 280px; height: 280px; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
-                <img src="foto1.png" alt="Nuestra foto 1" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-            </div>
-            <div class="foto-item reveal" style="width: 280px; height: 280px; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
-                <img src="foto2.png" alt="Nuestra foto 2" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-            </div>
-            <div class="foto-item reveal" style="width: 280px; height: 280px; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
-                <img src="foto3.png" alt="Nuestra foto 3" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-            </div>
+        <!-- Foto 1 -->
+        <div class="foto-item reveal" style="width: 280px; height: 280px; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            <img src="foto1.png" alt="Nuestra foto 1" style="width: 100%; height: 100%; object-fit: cover; display: block;">
         </div>
+        
+        <!-- Foto 2 -->
+        <div class="foto-item reveal" style="width: 280px; height: 280px; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            <img src="foto2.png" alt="Nuestra foto 2" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+        
+        <!-- Foto 3 -->
+        <div class="foto-item reveal" style="width: 280px; height: 280px; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            <img src="foto3.png" alt="Nuestra foto 3" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+        
+        <!-- Foto 4 -->
+        <div class="foto-item reveal" style="width: 280px; height: 280px; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            <img src="foto4.png" alt="Nuestra foto 4" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+        
+        <!-- Foto 5 -->
+        <div class="foto-item reveal" style="width: 280px; height: 280px; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            <img src="foto5.png" alt="Nuestra foto 5" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+        
+        <!-- Foto 6 -->
+        <div class="foto-item reveal" style="width: 280px; height: 280px; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            <img src="foto6.png" alt="Nuestra foto 6" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+
     </div>
+</div>
     
     <!-- NUEVA SECCIÓN: PASE PERSONALIZADO -->
     <div class="seccion-pases reveal" style="padding: 50px 20px; background-color: #ffffff; text-align: center;">
@@ -993,10 +1034,10 @@
             
             <p style="font-size: 0.75rem; letter-spacing: 2px; color: #5d4936; font-weight: 700; margin-bottom: 5px;">CON JÚBILO INVITAMOS A:</p>
             <!-- Puedes cambiar este nombre estáticamente o usar JS para leerlo de la URL -->
-            <h2 id="nombre-invitado" style="font-size: 1.4rem; color: #8d7a64; font-weight: 400; margin: 10px 0 20px 0; letter-spacing: 1px;">Familia Anfitriona</h2>
+            <h2 id="nombre-invitado" style="font-size: 1.4rem; color: #8d7a64; font-weight: 400; margin: 10px 0 20px 0; letter-spacing: 1px;">DARWIN ARMIJOS Y ESPOSA</h2>
             
             <div style="background: #8d7a64; color: white; display: inline-block; padding: 8px 20px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px;">
-                NÚMERO DE PASES: <span id="num-pases" style="font-size: 0.9rem;">2</span> PUESTOS
+                NÚMERO DE PASES: <span id="num-pases" style="font-size: 0.9rem;">2</span>
             </div>
             
             <p style="font-size: 0.7rem; color: #a69683; font-style: italic; margin-top: 15px;">* Los pases son válidos exclusivamente para las personas indicadas.</p>
@@ -1019,20 +1060,13 @@
             <p>Para nosotros es indispensable contar con tu valiosa presencia. Agradecemos confirmar tu asistencia lo antes posible.</p>
             
             <p>RESPETUOSAMENTE NO NIÑOS</p>
-            <div id="contenedor-confirmar">
-                <button onclick="mostrarFormulario()" class="btn-blanco-outline" id="btn-principal" style="background: transparent; cursor: pointer; width: auto;">Confirmar aquí</button>
-                
-                <div id="form-asistencia" style="display: none; margin-top: 20px;">
-                    <input type="text" id="nombres-asistentes" class="input-musica" 
-                           placeholder="Nombres de los asistentes..." 
-                           style="background: white; color: #5d4936; border: none; width: 90%; max-width: 300px; margin-bottom: 15px; padding: 12px; border-radius: 8px;">
-                    
-                    <button onclick="enviarAsistencia()" class="btn-blanco-outline" id="btn-enviar-asistencia"
-                             style="background: #ffffff; color: #8d7a64; cursor: pointer; display: block; margin: 0 auto; width: auto;">
-                        ENVIAR CONFIRMACIÓN
-                    </button>
-                </div>
-            </div>
+           <div id="contenedor-confirmar">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSM1dL_hZwHLjnl-OTnY53LE9SiMAXJlzyWqxfiDkX06PrHQ/viewform?usp=dialog"
+       target="_blank"
+       class="btn-blanco-outline">
+       Confirmar aquí
+    </a>
+</div>
         </div>
     </div>
 
@@ -1043,9 +1077,13 @@
         <p class="agradecimiento">¡Gracias por formar parte de nuestra historia!</p>
     </div>
 
-    <div class="creditos">
-        Realizado por Invitaciones Digitales Loja / 0960934663
-    </div>
+  <div class="creditos" style="text-align: center; padding: 20px; color: #888;">
+   
+    <a href="https://wa.me/593960934663" target="_blank" style="color: #8d7a64; text-decoration: none; font-weight: bold;">
+         Realizado por  Invitaciones Digitales Loja    / 0960934663
+    </a> 
+ 
+</div>
   
     <script>
         // LÓGICA DEL PRELOADER
@@ -1142,8 +1180,8 @@ document
             }
         }
 
-        // CONTADOR (Sincronizado a Sábado 30 de Agosto de 2026, 14:30 hs)
-        const weddingDate = new Date("Aug 30, 2026 14:30:00").getTime();
+        // CONTADOR 
+        const weddingDate = new Date("Jul 11, 2026 17:00:00").getTime();
         const updateCountdown = () => {
             const now = new Date().getTime();
             const distance = weddingDate - now;
