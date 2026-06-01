@@ -869,37 +869,28 @@
     margin:0;
 }
 
-@media (max-width:480px){
-
-    .header-section{
-        padding: 40px 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    /* QUITAR OVERLAY SOBRE LA IMAGEN */
-    .cursive,
-    .nombres-tit{
-        position: static;   /* 👈 clave: ya NO flotan sobre la imagen */
-        transform: none;
-        z-index: auto;
-        color: #8d7a64; /* o blanco si prefieres */
-        text-shadow: none;
-        margin: 10px 0;
-    }
+@media (max-width: 480px) {
 
     .seccion-foto-destacada{
-        width: 100%;
-        margin-top: 10px;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
     }
 
     .foto-principal{
-        width: 100%;
-        height: auto;   /* 👈 importante */
-        object-fit: cover;
+        width: 100vw;          /* ocupa todo el ancho real */
+        height: 85vh;          /* 👈 CLAVE: la hace grande en pantalla */
+        object-fit: cover;     /* llena sin deformarse */
         display: block;
+        margin: 0;
+    }
+
+    .header-section{
+        padding: 20px 0;       /* reduce espacio arriba/abajo */
+    }
+
+    .cursive, .nombres-tit{
+        margin-bottom: 5px;    /* evita que empuje la foto */
     }
 }
 
